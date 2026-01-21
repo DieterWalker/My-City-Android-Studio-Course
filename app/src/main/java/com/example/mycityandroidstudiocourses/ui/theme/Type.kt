@@ -22,7 +22,7 @@ val Typography = Typography(
     displayLarge = TextStyle(
         fontFamily = GoogleSans,
         fontWeight = FontWeight.Bold,
-        fontSize = 24.sp,
+        fontSize = 20.sp,
     ),
     labelSmall = TextStyle(
         fontFamily = GoogleSans,
