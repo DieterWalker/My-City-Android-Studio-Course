@@ -4,8 +4,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 
 @Composable
-fun MyCityDetailScreen(){
+fun MyCityCategoryScreen(){
     Text(
-        text = "done"
+        text = "Done"
     )
 }

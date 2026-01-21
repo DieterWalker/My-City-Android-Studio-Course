@@ -28,13 +28,14 @@ import com.example.mycityandroidstudiocourses.data.Category
 @Composable
 fun HomeCategoryList(
     categories: List<Category>,
-    modifier: Modifier = Modifier
-//    onCategoryClick: (Category) -> Unit
+    onCategoryClick: () -> Unit,
+    modifier: Modifier = Modifier,
+
 ){
     LazyColumn(modifier = modifier){
         items(categories) { category ->
             Button(
-                onClick = {/*TO DO*/},
+                onClick = onCategoryClick,
                 shape = RoundedCornerShape(8.dp),
                 colors = ButtonDefaults.buttonColors(
                     containerColor = Color(0xff66a3ff) ,
@@ -58,6 +59,7 @@ fun HomeCategoryList(
         }
     }
 }
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeCategoryTopBar(modifier: Modifier){
