@@ -8,7 +8,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.mycityandroidstudiocourses.data.Category
 
 @Composable
-fun MyCityHomeScreen(){
+fun MyCityHomeScreen(
+    onCategoryClick: () -> Unit
+){
     Scaffold(
         topBar = {
             HomeCategoryTopBar(modifier = Modifier)
@@ -16,15 +18,16 @@ fun MyCityHomeScreen(){
     ) { it ->
         HomeCategoryList(
             Category.entries,
+            onCategoryClick = onCategoryClick,
             modifier = Modifier.padding(it)
         )
     }
 }
 
-@Preview (showBackground = true)
-@Composable
-fun Test(){
-    MyCityHomeScreen()
-}
+//@Preview (showBackground = true)
+//@Composable
+//fun Test(){
+//    MyCityHomeScreen()
+//}
 
 
