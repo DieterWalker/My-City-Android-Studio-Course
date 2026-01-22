@@ -32,12 +32,20 @@ fun MyCityApp() {
                 viewModel = viewModel,
                 onBack = {
                     navController.popBackStack()
+                },
+                onPlaceClick = {
+                    navController.navigate(route = MyCityScreen.INFORMATION.name)
                 }
             )
         }
 
         composable (route = MyCityScreen.INFORMATION.name){
-            MyCityDetailScreen()
+            MyCityDetailScreen(
+                viewModel = viewModel,
+                onBack = {
+                    navController.popBackStack()
+                }
+            )
         }
     }
 }
