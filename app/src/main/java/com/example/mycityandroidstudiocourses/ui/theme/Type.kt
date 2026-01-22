@@ -27,7 +27,7 @@ val Typography = Typography(
     labelSmall = TextStyle(
         fontFamily = GoogleSans,
         fontStyle = FontStyle.Italic,
-        fontSize = 10.sp,
+        fontSize = 12.sp,
     ),
     bodyLarge = TextStyle(
         fontFamily = GoogleSans,

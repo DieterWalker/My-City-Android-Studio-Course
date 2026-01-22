@@ -5,4 +5,8 @@
     <dimen name="list_button_text_padding">10dp</dimen>
     <dimen name="list_button_rounded">8dp</dimen>
     <dimen name="list_button_image_rounded">8dp</dimen>
+
+    <dimen name="detail_image_padding">10dp</dimen>
+    <dimen name="detail_image_rounded">10dp</dimen>
+    <dimen name="detail_text_padding"> 10dp</dimen>
 </resources>
