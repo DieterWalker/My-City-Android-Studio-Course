@@ -28,14 +28,14 @@ import com.example.mycityandroidstudiocourses.data.Category
 @Composable
 fun HomeCategoryList(
     categories: List<Category>,
-    onCategoryClick: () -> Unit,
+    onCategoryClick: (Category) -> Unit,
     modifier: Modifier = Modifier,
 
-){
+    ){
     LazyColumn(modifier = modifier){
         items(categories) { category ->
             Button(
-                onClick = onCategoryClick,
+                onClick = {onCategoryClick(category)},
                 shape = RoundedCornerShape(8.dp),
                 colors = ButtonDefaults.buttonColors(
                     containerColor = Color(0xff66a3ff) ,

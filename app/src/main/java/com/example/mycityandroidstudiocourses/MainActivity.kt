@@ -22,8 +22,8 @@ class MainActivity : ComponentActivity() {
 }
 
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    MyCityApp()
-}
+//@Preview(showBackground = true)
+//@Composable
+//fun GreetingPreview() {
+//    MyCityApp()
+//}
