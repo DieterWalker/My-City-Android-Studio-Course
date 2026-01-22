@@ -2,10 +2,10 @@
     <string name="app_name">My City Android Studio</string>
 
     <!-- Các danh mục -->
-    <string name="category_coffee">Quán Cafe</string>
-    <string name="category_restaurant">Nhà hàng</string>
-    <string name="category_park">Công Viên</string>
-    <string name="category_mall">Trung tâm thương mại</string>
+    <string name="category_coffee">QUÁN CAFE</string>
+    <string name="category_restaurant">NHÀ HÀNG</string>
+    <string name="category_park">CÔNG VIÊN</string>
+    <string name="category_mall">TRUNG TÂM THƯƠNG MẠI</string>
 
     <!-- Thành phần danh mục quán cafe-->
     <string name="coffee_1_name">HIGHLAND COFFEE</string>

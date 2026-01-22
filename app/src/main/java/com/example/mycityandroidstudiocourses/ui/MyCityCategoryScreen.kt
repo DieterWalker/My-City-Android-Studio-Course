@@ -7,13 +7,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.mycityandroidstudiocourses.data.Category
+import androidx.compose.ui.res.stringResource
+import com.example.mycityandroidstudiocourses.data.displayNameRes
 
 @Composable
 fun MyCityCategoryScreen(
     viewModel: MyCityViewModel,
-    onBack:  () -> Unit
+    onBack: () -> Unit,
+    onPlaceClick: () -> Unit
 ){
     val uiState by viewModel.uiState.collectAsState()
 
@@ -21,13 +22,17 @@ fun MyCityCategoryScreen(
         topBar = {
             MyCityCategoryTopBar(
                 onBack = onBack,
-                modifier = Modifier
+                modifier = Modifier,
+                title = uiState.currentCategory
+                    ?.let { stringResource(it.displayNameRes()) }
+                    ?: "DANH MỤC"
             )
         }
     ) { innerPadding ->
         MyCityPlacesList(
             places = uiState.placesByCategory,
-            modifier = Modifier.padding(innerPadding)
+            modifier = Modifier.padding(innerPadding),
+            onPlaceClick = onPlaceClick
         )
     }
 }

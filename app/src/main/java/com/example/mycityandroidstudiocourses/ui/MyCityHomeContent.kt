@@ -36,13 +36,13 @@ fun HomeCategoryList(
         items(categories) { category ->
             Button(
                 onClick = {onCategoryClick(category)},
-                shape = RoundedCornerShape(8.dp),
+                shape = RoundedCornerShape(dimensionResource(R.dimen.list_button_rounded)),
                 colors = ButtonDefaults.buttonColors(
                     containerColor = Color(0xff66a3ff) ,
                     contentColor = Color.White ,
                 ),
                 modifier = Modifier
-                    .padding(dimensionResource(R.dimen.category_list_button_padding))
+                    .padding(dimensionResource(R.dimen.list_button_padding))
                     .fillMaxWidth()
             ){
                 Text(
@@ -52,7 +52,7 @@ fun HomeCategoryList(
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(
-                            dimensionResource(R.dimen.category_list_button_text_padding)
+                            dimensionResource(R.dimen.list_button_text_padding)
                         )
                 )
             }
