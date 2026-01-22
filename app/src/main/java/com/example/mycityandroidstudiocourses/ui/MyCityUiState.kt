@@ -5,5 +5,6 @@ import com.example.mycityandroidstudiocourses.data.Places
 
 data class MyCityUiState (
     val currentCategory: Category? = null,
-    val placesByCategory: List<Places> = emptyList()
+    val placesByCategory: List<Places> = emptyList(),
+    val currentPlace: Places? = null
 )

@@ -37,12 +37,12 @@ import com.example.mycityandroidstudiocourses.data.Places
 fun MyCityPlacesList(
     places: List<Places>,
     modifier: Modifier = Modifier,
-    onPlaceClick: () -> Unit
+    onPlaceClick: (Places) -> Unit
 ){
     LazyColumn(modifier = modifier) {
         items(places) { place ->
             Button(
-                onClick = onPlaceClick,
+                onClick = {onPlaceClick(place)},
                 shape = RoundedCornerShape(dimensionResource(R.dimen.list_button_rounded)),
                 colors = ButtonDefaults.buttonColors(
                     containerColor = Color(0xff66a3ff) ,

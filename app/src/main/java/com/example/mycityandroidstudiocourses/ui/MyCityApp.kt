@@ -33,7 +33,8 @@ fun MyCityApp() {
                 onBack = {
                     navController.popBackStack()
                 },
-                onPlaceClick = {
+                onPlaceClick = { place ->
+                    viewModel.onPlaceSelect(place)
                     navController.navigate(route = MyCityScreen.INFORMATION.name)
                 }
             )

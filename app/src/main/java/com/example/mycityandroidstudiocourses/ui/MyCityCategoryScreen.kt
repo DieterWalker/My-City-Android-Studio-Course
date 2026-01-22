@@ -8,13 +8,14 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import com.example.mycityandroidstudiocourses.data.Places
 import com.example.mycityandroidstudiocourses.data.displayNameRes
 
 @Composable
 fun MyCityCategoryScreen(
     viewModel: MyCityViewModel,
     onBack: () -> Unit,
-    onPlaceClick: () -> Unit
+    onPlaceClick: (Places) -> Unit
 ){
     val uiState by viewModel.uiState.collectAsState()
 

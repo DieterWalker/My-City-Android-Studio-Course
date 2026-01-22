@@ -2,6 +2,7 @@ package com.example.mycityandroidstudiocourses.ui
 
 import androidx.lifecycle.ViewModel
 import com.example.mycityandroidstudiocourses.data.Category
+import com.example.mycityandroidstudiocourses.data.Places
 import com.example.mycityandroidstudiocourses.data.local.LocalPlaceDataProvider
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -24,4 +25,11 @@ class MyCityViewModel : ViewModel() {
         }
     }
 
+    fun onPlaceSelect(place: Places){
+        _uiState.update {
+            it.copy(
+                currentPlace = place
+            )
+        }
+    }
 }
