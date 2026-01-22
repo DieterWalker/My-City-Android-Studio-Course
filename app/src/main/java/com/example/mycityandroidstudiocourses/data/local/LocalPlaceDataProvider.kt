@@ -33,7 +33,7 @@ object LocalPlaceDataProvider {
         /* KAI COFFEE */
         Places(
             imageRes = R.drawable.kaicoffee,
-            nameRes = R.string.coffee_2_name,
+            nameRes = R.string.coffee_4_name,
             addressRes = R.string.coffee_2_address,
             informationRes = R.string.coffee_2_information,
             category = Category.Cafe,
