@@ -11,9 +11,11 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import com.example.mycityandroidstudiocourses.ui.utils.MyCityDetailScreenType
 
 @Composable
 fun MyCityDetailScreen(
+    screenType: MyCityDetailScreenType,
     viewModel: MyCityViewModel,
     onBack: () -> Unit
 ){
@@ -28,10 +30,17 @@ fun MyCityDetailScreen(
             )
         }
     ) { it ->
-        MyCityPlaceDetail(
-            place,
-            modifier = Modifier.padding(it)
-        )
+        if ( screenType == MyCityDetailScreenType.COMPACT_SCREEN)
+            MyCityPlaceDetail(
+                place,
+                modifier = Modifier.padding(it)
+            )
+        else {
+            MyCityPlaceDetail_ExpandedScreen(
+                place,
+                modifier = Modifier.padding(it)
+            )
+        }
     }
 }
 

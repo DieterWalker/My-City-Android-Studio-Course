@@ -7,7 +7,9 @@ import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -68,6 +70,54 @@ fun MyCityPlaceDetail(
     }
 }
 
+@Composable
+fun MyCityPlaceDetail_ExpandedScreen(
+    place: Places,
+    modifier: Modifier
+){
+    Row(
+        modifier = modifier
+    ) {
+        Column() {
+            Image(
+                painter = painterResource(place.imageRes),
+                contentDescription = null,
+                modifier = Modifier
+                    .padding(dimensionResource(R.dimen.detail_image_padding))
+                    .clip(RoundedCornerShape(dimensionResource(R.dimen.detail_image_rounded)))
+            )
+        }
+        Column() {
+            Text(
+                text = stringResource(place.nameRes),
+                textAlign = TextAlign.Center,
+                style = MaterialTheme.typography.displayLarge,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(dimensionResource(R.dimen.detail_text_padding))
+            )
+
+                Text(
+                    text = "Địa chỉ: " + stringResource(place.addressRes),
+                    textAlign = TextAlign.Left,
+                    style = MaterialTheme.typography.labelSmall,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(dimensionResource(R.dimen.detail_text_padding))
+                )
+            Column (modifier = Modifier.verticalScroll(rememberScrollState())) {
+                Text(
+                    text = stringResource(place.informationRes),
+                    textAlign = TextAlign.Justify,
+                    style = MaterialTheme.typography.bodyLarge,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(dimensionResource(R.dimen.detail_text_padding))
+                )
+            }
+        }
+    }
+}
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MyCityDetailTopBar(
