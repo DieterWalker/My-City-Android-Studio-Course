@@ -1,13 +1,22 @@
 package com.example.mycityandroidstudiocourses.ui
 
+import android.util.Log
+import android.widget.Toast
 import androidx.compose.material3.windowsizeclass.WindowWidthSizeClass
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHost
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.example.mycityandroidstudiocourses.data.Category
+import com.example.mycityandroidstudiocourses.printer.SunmiPrinterManager
 import com.example.mycityandroidstudiocourses.ui.utils.MyCityDetailScreenType
 
 @Composable
@@ -18,6 +27,24 @@ fun MyCityApp(
 
     val viewModel: MyCityViewModel = viewModel()
     val screenType: MyCityDetailScreenType
+    /* Tạo hàm gọi máy in */
+    var testPrinter by remember { mutableStateOf(false) }
+    val context = LocalContext.current
+    val printerManager = remember {
+        SunmiPrinterManager(context)
+    }
+
+    LaunchedEffect(Unit) {
+        printerManager.init { hasPrinter ->
+            if (hasPrinter) {
+                testPrinter = true
+            } else {
+                testPrinter = false
+            }
+        }
+    }
+
+
     when (windowSize){
         WindowWidthSizeClass.Compact -> {
             screenType = MyCityDetailScreenType.COMPACT_SCREEN
@@ -38,6 +65,7 @@ fun MyCityApp(
     ) {
         composable ( route = MyCityScreen.MAIN.name ) {
             MyCityHomeScreen(
+                testPrinter = testPrinter,
                 onCategoryClick = { category ->
                     viewModel.onCategorySelect(category)
                     navController.navigate(route = MyCityScreen.PLACES.name)
@@ -60,6 +88,13 @@ fun MyCityApp(
 
         composable (route = MyCityScreen.INFORMATION.name){
             MyCityDetailScreen(
+                onPrintClick = {
+                    if (testPrinter){
+                        Toast.makeText(context, "Đang thực hiện in!", Toast.LENGTH_SHORT).show()
+                    } else {
+                        Toast.makeText(context, "Có máy in đâu mà in :))))", Toast.LENGTH_SHORT).show()
+                    }
+                },
                 screenType = screenType,
                 viewModel = viewModel,
                 onBack = {

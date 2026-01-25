@@ -1,8 +1,10 @@
 package com.example.mycityandroidstudiocourses.ui
 
+import android.widget.Toast
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -12,6 +14,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.filled.MailOutline
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -23,6 +26,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -121,9 +125,11 @@ fun MyCityPlaceDetail_ExpandedScreen(
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MyCityDetailTopBar(
+    onPrintClick: () -> Unit,
     onBack: () -> Unit,
     modifier: Modifier
 ){
+    val context = LocalContext.current
     TopAppBar(
         title = {
             Row(
@@ -141,6 +147,15 @@ fun MyCityDetailTopBar(
                 Text(
                     text = "THÔNG TIN ĐỊA ĐIỂM"
                 )
+                Spacer(modifier = Modifier.weight(1f))
+                IconButton(
+                    onClick = onPrintClick,
+                ){
+                    Icon(
+                        imageVector = Icons.Default.MailOutline,
+                        contentDescription = null
+                    )
+                }
             }
         }
     )

@@ -1,5 +1,5 @@
 [versions]
-sunmiPrinter = "1.0.17"
+#sunmiPrinter = "1.0.17"
 
 agp = "9.0.0"
 coreKtx = "1.10.1"
@@ -14,7 +14,7 @@ navigationCompose = "2.9.6"
 material3WindowSizeClass = "1.4.0"
 
 [libraries]
-sunmi-printerx = { group = "com.sunmi", name = "printerx", version.ref = "sunmiPrinter" }
+#sunmi-printerx = { group = "com.sunmi", name = "printerx", version.ref = "sunmiPrinter" }
 
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
