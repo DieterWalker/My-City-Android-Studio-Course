@@ -39,7 +39,7 @@ android {
 
 dependencies {
     //    Thêm thư thư viện của SUNMI
-    implementation("com.sunmi:printerx:latest.release")
+    implementation("com.sunmi:printerx:1.0.17")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)

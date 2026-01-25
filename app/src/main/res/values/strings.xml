@@ -9,65 +9,80 @@
 
     <!-- Thành phần danh mục quán cafe-->
     <string name="coffee_1_name">HIGHLAND COFFEE</string>
-    <string name="coffee_1_address">Bến Bạch Đằng, Thành phố, Thủ Đức, Thành phố Hồ Chí Minh</string>
+    <string name="coffee_1_address">10B Tôn Đức Thắng, Phường Sài Gòn, Quận 1, Thành phố Hồ Chí Minh</string>
     <string name="coffee_1_information">Highlands Coffee là chuỗi cửa hàng cà phê và trà hàng đầu tại Việt Nam, được thành lập vào năm 1999 bởi David Thái. Thương hiệu này bắt đầu từ niềm đam mê di sản cà phê Việt Nam và khát vọng nâng tầm trải nghiệm thưởng thức cà phê truyền thống trong không gian hiện đại.</string>
+    <string name="coffee_1_link">https://maps.app.goo.gl/KYae5mbf7wqmGhja7</string>
 
     <string name="coffee_2_name">KATINAT</string>
-    <string name="coffee_2_address">10B Tôn Đức Thắng, Phường Sài Gòn, Quận 1, Thành phố Hồ Chí Minh</string>
+    <string name="coffee_2_address">n 2 Thủ Thiêm, Thành phố, Thủ Đức, Thành phố Hồ Chí Minh</string>
     <string name="coffee_2_information">Katinat Saigon Kafe là chuỗi cà phê nổi tiếng tại TP.HCM, thành lập năm 2016, lấy cảm hứng từ con đường Catinat xưa (nay là Đồng Khởi) và phong cách sống Sài Gòn, kết hợp nét hoài cổ và hiện đại, nổi bật với không gian đậm chất "retro" và menu đa dạng.</string>
+    <string name="coffee_2_link">https://maps.app.goo.gl/XG1P2St1EHRDtw6C7</string>
 
     <string name="coffee_3_name">THE HOUSE COFFEE</string>
     <string name="coffee_3_address">141 Nguyễn Thái Bình, Phường Nguyễn Thái Bình, Quận 1, Thành phố Hồ Chí Minh</string>
     <string name="coffee_3_information">The Coffee House tin rằng, nụ cười là hương vị ngọt ngào nhất trong mỗi ngày mới. Từ những ly cà phê đậm đà, những tách trà thanh mát, đến từng lời chào thân quen, chúng tôi mong mỗi vị khách khi ghé Nhà đều mang theo một niềm vui nhỏ – để rồi nụ cười ấy lại được lan toả khắp nơi.</string>
+    <string name="coffee_3_link">https://maps.app.goo.gl/QWb3yjcakuP6tvnG6</string>
 
     <string name="coffee_4_name">KAI COFFEE</string>
     <string name="coffee_4_address">139 Nguyễn Thái Bình, Phường Nguyễn Thái Bình, Quận 1, Thành phố Hồ Chí Minh</string>
     <string name="coffee_4_information">KAI Coffee là chuỗi cà phê tại TP.HCM nổi bật với không gian thiết kế hiện đại, trẻ trung, phục vụ đa dạng thức uống và món ăn nhẹ, đặc biệt nhiều chi nhánh hoạt động 24/7, hướng đến giới trẻ và dân văn phòng cần nơi học tập, làm việc hay thư giãn, với điểm nhấn là chất lượng đồ uống, thái độ nhân viên và không gian thoải mái, ấm cúng, mang lại trải nghiệm tích cực và năng lượng cho khách hàng.</string>
+    <string name="coffee_4_link">https://maps.app.goo.gl/NNs4NGY456u3hxgRA</string>
 
     <!-- Thành phần danh mục nhà hàng -->
     <string name="restaurant_1_name">LA BRASSERIE RESTAURANT</string>
     <string name="restaurant_1_address">235 Nguyễn Văn Cừ, Nguyễn Cư Trinh, 1, Ho Chi Minh City, Thành phố Hồ Chí Minh</string>
     <string name="restaurant_1_information">Nhà hàng La Brasserie tọa lạc tại tầng 2 của Hotel Nikko Sài Gòn, nổi tiếng là một trong những địa điểm buffet hải sản cao cấp nhất tại Thành phố Hồ Chí Minh. Nhà hàng phục vụ các món ăn quốc tế với điểm nhấn là đại tiệc hải sản tươi sống và đồ uống không giới hạn.</string>
+    <string name="restaurant_1_link">https://maps.app.goo.gl/3tksHUW14HX8aMH68</string>
 
     <string name="restaurant_2_name">BENTHANH PRINCESS</string>
     <string name="restaurant_2_address">Cảng Sài Gòn, 5 Đ. Nguyễn Tất Thành, Phường 13, Quận 4, Thành phố Hồ Chí Minh</string>
     <string name="restaurant_2_information">Du thuyền Benthanh Princess (Bến Thành Princess) là du thuyền nhà hàng cao cấp tiêu chuẩn 5 sao hoạt động trên sông Sài Gòn, mang phong cách kiến trúc nhiệt đới hiện đại với sức chứa lên đến 350 khách.</string>
+    <string name="restaurant_2_link">https://maps.app.goo.gl/cM7wCAJSdaPBGjCL6</string>
 
     <string name="restaurant_3_name">PHO 79 RESTAURANT</string>
     <string name="restaurant_3_address">79 Sương Nguyệt Ánh, Phường Bến Thành, Quận 1, Tp. HCM</string>
     <string name="restaurant_3_information">Là một trong những điểm đến cho giới thượng lưu, nhà hàng Phố 79 với không gian ẩm thực sang trọng và chuyên nghiệp. Nhà hàng cung cấp từ những món ăn dân dã cho đến những món ăn từ những loại hải sản hiếm có, hứa hẹn sẽ làm hài lòng thực khách trong và ngoài nước.</string>
+    <string name="restaurant_3_link">https://maps.app.goo.gl/Nijfjr4euvZZy5fr6</string>
 
     <!-- Thành phần danh mục công viên -->
     <string name="park_1_name">SAIGON RIVERSIDE PARK</string>
     <string name="park_1_address">59 Thủ Thiêm, Thủ Đức, Thành phố Hồ Chí Minh</string>
     <string name="park_1_information">Khai trương vào cuối năm 2023, công viên bờ sông Sài Gòn nhanh chóng trở thành điểm đến yêu thích của người dân thành phố và du khách. Với diện tích gần 20 ha, công viên này là không gian lý tưởng để bạn tận hưởng những giây phút thư giãn bên dòng sông Sài Gòn thơ mộng.</string>
+    <string name="park_1_link">https://maps.app.goo.gl/5munveFHHBhZFWpF7</string>
 
     <string name="park_2_name">DAM SEN WATER PARK</string>
     <string name="park_2_address">Đ. Hòa Bình/3 Đ. Bình Thới, Phường 3, Quận 11, Thành phố Hồ Chí Minh</string>
     <string name="park_2_information">Công viên Văn hóa Đầm Sen là công viên giải trí nằm trên đường Hòa Bình, phường Bình Thới, Thành phố Hồ Chí Minh. Công viên có diện tích 50 hecta gồm 20% là mặt hồ và 60% cây xanh và vườn hoa.</string>
+    <string name="park_2_link">https://maps.app.goo.gl/1MpPFmr6xAv3PA5d8</string>
 
     <string name="park_3_name">SUOI TIEN CULTURAL THEME PARK</string>
     <string name="park_3_address">20 XLHN, P. Tăng, Nhơn Phú, Thành phố Hồ Chí Minh</string>
     <string name="park_3_information">Khu Du lịch Văn hóa Suối Tiên là một công viên liên hợp vui chơi giải trí kết hợp truyền thống các yếu tố văn hóa – lịch sử – tâm linh. Vị trí khu du lịch tại 120 Xa lộ Hà Nội, Phường Tăng Nhơn Phú, Thành phố Hồ Chí Minh.</string>
+    <string name="park_3_link">https://maps.app.goo.gl/3DAgXmaiXWEynyoH7</string>
 
     <string name="park_4_name">SAIGON ZOO AND BOTANICAL GARDENS</string>
     <string name="park_4_address">2 Nguyễn Bỉnh Khiêm, Phường Sài Gòn, Quận 1, Thành phố Hồ Chí Minh</string>
     <string name="park_4_information">Thảo Cầm Viên Sài Gòn, hay còn được gọi ở địa phương là Sở Thú, là công viên bảo tồn động vật - thực vật rộng hơn 20 ha ở Thành phố Hồ Chí Minh, Việt Nam. Đây là vườn thú lâu đời đứng hàng thứ tám trên thế giới.</string>
+    <string name="park_4_link">https://maps.app.goo.gl/LPmwaaB5PbQV3C1y6</string>
 
     <!-- Thành phần danh mục trung tâm thương mại -->
     <string name="mall_1_name">LANDMARK 81</string>
     <string name="mall_1_address">720A Điện Biên Phủ, Phường, Bình Thạnh, Thành phố Hồ Chí Minh 72300</string>
     <string name="mall_1_information">Landmark 81 là tòa nhà chọc trời cao nhất Việt Nam và từng là cao nhất Đông Nam Á, nằm trong khu đô thị Vinhomes Central Park tại TP.HCM, nổi bật với thiết kế lấy cảm hứng từ bó tre, có 81 tầng bao gồm căn hộ, khách sạn 5 sao, trung tâm thương mại Vincom Center, nhà hàng, bar và đài quan sát (Landmark 81 SkyView). Tòa nhà còn là điểm đến vui chơi giải trí với sân băng, các cửa hàng, ẩm thực phong phú, và khu công viên rộng lớn bên cạnh sông Sài Gòn.</string>
+    <string name="mall_1_link">https://maps.app.goo.gl/n7ej5nN4aDT6eLuH7</string>
 
     <string name="mall_2_name">BITEXCO FINANCIAL TOWER</string>
     <string name="mall_2_address">2 Đ. Hải Triều, Bến Nghé, Quận 1, Thành phố Hồ Chí Minh</string>
     <string name="mall_2_information">Bitexco Financial Tower (Tháp Tài chính Bitexco) là biểu tượng kiến trúc hiện đại tại Quận 1, TP.HCM, nổi bật với thiết kế hình búp sen độc đáo, chiều cao gần 270m, có 68 tầng với văn phòng, trung tâm thương mại Icon68, nhà hàng, rạp chiếu phim và bãi đáp trực thăng ấn tượng ở tầng 52, thể hiện sự phát triển năng động của thành phố.</string>
+    <string name="mall_2_link">https://maps.app.goo.gl/g1zEfpBPc61sTmib9</string>
 
     <string name="mall_3_name">GIGAMALL</string>
     <string name="mall_3_address">240 - 242 Đ. Phạm Văn Đồng, Hiệp Bình Phước, Thủ Đức, Thành phố Hồ Chí Minh</string>
     <string name="mall_3_information">GigaMall là một trung tâm thương mại hiện đại theo mô hình kết hợp mua sắm và giải trí tại 240-242 Phạm Văn Đồng, TP. Thủ Đức, TP.HCM, nổi bật với thiết kế lấy cảm hứng từ đàn piano, hệ thống đèn LED tương tác công nghệ cao và tổ hợp giải trí công nghệ JP World, quy tụ đa dạng thương hiệu quốc tế và trong nước về thời trang, ẩm thực và khu vui chơi, mang đến trải nghiệm mua sắm - giải trí toàn diện cho gia đình.</string>
+    <string name="mall_3_link">https://maps.app.goo.gl/3Zj7Eb8oGsUbZvfJ9</string>
 
-    <string name="mall_4_name">THISO MALL</string>
+    <string name="mall_4_name">THISO MALL SALA</string>
     <string name="mall_4_address">10 Mai Chí Thọ, Thủ Thiêm, Thủ Đức, Thành phố Hồ Chí Minh</string>
     <string name="mall_4_information">Thiso Mall Sala là trung tâm thương mại hiện đại, sầm uất tại khu đô thị Sala, Thủ Thiêm (TP. Thủ Đức), nổi bật với không gian thiết kế mở, hiện đại lấy cảm hứng từ nghệ thuật gấp giấy Origami, tích hợp đa dạng mua sắm, ẩm thực, giải trí (Emart, rạp chiếu phim, khu vui chơi trẻ em, sự kiện), thu hút giới trẻ và gia đình, trở thành điểm đến "all-in-one" và check-in lý tưởng gần trung tâm Sài Gòn.</string>
+    <string name="mall_4_link">https://maps.app.goo.gl/PTpAdzqM37LzbmPD8</string>
 </resources>

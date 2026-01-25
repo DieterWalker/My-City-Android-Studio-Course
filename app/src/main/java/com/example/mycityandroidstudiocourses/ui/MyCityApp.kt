@@ -1,5 +1,8 @@
 package com.example.mycityandroidstudiocourses.ui
 
+import android.content.Intent
+import android.graphics.BitmapFactory
+import android.net.Uri
 import android.util.Log
 import android.widget.Toast
 import androidx.compose.material3.windowsizeclass.WindowWidthSizeClass
@@ -10,11 +13,13 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHost
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.example.mycityandroidstudiocourses.R
 import com.example.mycityandroidstudiocourses.data.Category
 import com.example.mycityandroidstudiocourses.printer.SunmiPrinterManager
 import com.example.mycityandroidstudiocourses.ui.utils.MyCityDetailScreenType
@@ -65,7 +70,6 @@ fun MyCityApp(
     ) {
         composable ( route = MyCityScreen.MAIN.name ) {
             MyCityHomeScreen(
-                testPrinter = testPrinter,
                 onCategoryClick = { category ->
                     viewModel.onCategorySelect(category)
                     navController.navigate(route = MyCityScreen.PLACES.name)
@@ -88,18 +92,47 @@ fun MyCityApp(
 
         composable (route = MyCityScreen.INFORMATION.name){
             MyCityDetailScreen(
-                onPrintClick = {
-                    if (testPrinter){
-                        Toast.makeText(context, "Đang thực hiện in!", Toast.LENGTH_SHORT).show()
+                onShare = { place ->
+                    val link = context.getString(place.linkRes)
+                    val uri = Uri.parse(link)
+
+                    val intent = Intent(Intent.ACTION_VIEW, uri).apply {
+                        setPackage("com.google.android.apps.maps")
+                    }
+
+                    try {
+                        context.startActivity(intent)
+                    } catch (e: Exception) {
+                        // Nếu không có Google Maps thì mở bằng app mặc định
+                        val fallback = Intent(Intent.ACTION_VIEW, uri)
+                        context.startActivity(fallback)
+                    }
+                },
+                onPrintClick = { place ->
+                    if (testPrinter) {
+                        val name = context.getString(place.nameRes)
+                        val address = context.getString(place.addressRes)
+                        val info = context.getString(place.informationRes)
+                        val link = context.getString(place.linkRes)
+                        val image = BitmapFactory.decodeResource(
+                            context.resources,
+                            place.imageRes
+                        )
+                        printerManager.printTest(name, address, info, link, image)
                     } else {
-                        Toast.makeText(context, "Có máy in đâu mà in :))))", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(
+                            context,
+                            "Không có máy in",
+                            Toast.LENGTH_SHORT
+                        ).show()
                     }
                 },
                 screenType = screenType,
                 viewModel = viewModel,
                 onBack = {
                     navController.popBackStack()
-                }
+                },
+                testPrinter = testPrinter
             )
         }
     }

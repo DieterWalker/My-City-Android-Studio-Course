@@ -107,7 +107,7 @@ fun MyCityCategoryTopBar(
                 }
                 Text(
                     text = title,
-                    style = MaterialTheme.typography.displayLarge,
+                    style = MaterialTheme.typography.displayMedium,
                 )
             }
         }, modifier = modifier

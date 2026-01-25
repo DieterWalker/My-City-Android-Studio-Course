@@ -18,11 +18,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.dimensionResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.mycityandroidstudiocourses.R
 import com.example.mycityandroidstudiocourses.data.Category
+import com.example.mycityandroidstudiocourses.data.displayNameRes
 
 
 @Composable
@@ -46,7 +48,7 @@ fun HomeCategoryList(
                     .fillMaxWidth()
             ){
                 Text(
-                    text = category.name,
+                    text = stringResource(category.displayNameRes()),
                     textAlign = TextAlign.Left,
                     style = MaterialTheme.typography.displayLarge,
                     modifier = Modifier
@@ -67,7 +69,7 @@ fun HomeCategoryTopBar(modifier: Modifier){
         title = {
             Text(
                 text = "THÀNH PHỐ HỒ CHÍ MINH",
-                style = MaterialTheme.typography.displayLarge,
+                style = MaterialTheme.typography.displayMedium,
                 modifier = modifier
             )
         },
