@@ -15,6 +15,7 @@ import com.example.mycityandroidstudiocourses.ui.utils.MyCityDetailScreenType
 
 @Composable
 fun MyCityDetailScreen(
+    onPrintClick: () -> Unit,
     screenType: MyCityDetailScreenType,
     viewModel: MyCityViewModel,
     onBack: () -> Unit
@@ -25,6 +26,7 @@ fun MyCityDetailScreen(
     Scaffold(
         topBar = {
             MyCityDetailTopBar(
+                onPrintClick = onPrintClick,
                 onBack = onBack,
                 modifier = Modifier
             )
