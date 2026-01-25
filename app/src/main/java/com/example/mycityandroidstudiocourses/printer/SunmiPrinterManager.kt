@@ -1,8 +1,23 @@
 package com.example.mycityandroidstudiocourses.printer
 
 import android.content.Context
+import android.graphics.Bitmap
+import android.widget.Toast
+import androidx.compose.material3.Text
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextAlign
+import com.example.mycityandroidstudiocourses.data.Places
 import com.sunmi.printerx.PrinterSdk
 import com.sunmi.printerx.SdkException
+import com.sunmi.printerx.api.LineApi
+import com.sunmi.printerx.enums.Align
+import com.sunmi.printerx.enums.DividingLine
+import com.sunmi.printerx.enums.ErrorLevel
+import com.sunmi.printerx.style.BaseStyle
+import com.sunmi.printerx.style.BitmapStyle
+import com.sunmi.printerx.style.QrStyle
+import com.sunmi.printerx.style.TextStyle
+import kotlin.math.log
 
 /*
     Class Quản lý máy in PrinterX SDK
@@ -48,4 +63,26 @@ class SunmiPrinterManager(private val context: Context) {
     fun destroy(){
         PrinterSdk.getInstance().destroy()
     }
+
+    fun printTest(
+        name: String,
+        address: String,
+        information: String,
+        link: String,
+        image: Bitmap
+    ) {
+        printer?.let { p ->
+            val lineApi = p.lineApi()
+
+            BillFormatter.printPlaceInformation(
+                lineApi = lineApi,
+                name = name,
+                address = address,
+                information = information,
+                link = link,
+                image = image
+            )
+        }
+    }
+
 }

@@ -11,7 +11,6 @@ import com.example.mycityandroidstudiocourses.data.Category
 
 @Composable
 fun MyCityHomeScreen(
-    testPrinter: (Boolean),
     onCategoryClick: (Category) -> Unit
 ){
     Scaffold(
@@ -28,9 +27,6 @@ fun MyCityHomeScreen(
                 Category.entries,
                 onCategoryClick = onCategoryClick,
                 modifier = Modifier.padding(it)
-            )
-            Text(
-                text = if (testPrinter){ "Có máy in tích hợp" } else { "Không có máy in tích hợp" }
             )
         }
     }

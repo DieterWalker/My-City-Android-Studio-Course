@@ -12,6 +12,8 @@ data class Places(
     @StringRes val addressRes: Int,
     /** Places Information **/
     @StringRes val informationRes: Int,
+    /** Places Map **/
+    @StringRes val linkRes: Int,
     /** Places Category **/
     var category: Category
 )

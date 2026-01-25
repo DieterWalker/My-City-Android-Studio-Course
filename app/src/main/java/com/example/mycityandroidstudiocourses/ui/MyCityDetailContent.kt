@@ -14,6 +14,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.material.icons.filled.MailOutline
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -45,6 +46,7 @@ fun MyCityPlaceDetail(
             contentDescription = null,
             modifier = Modifier
                 .padding(dimensionResource(R.dimen.detail_image_padding))
+                .align (Alignment.CenterHorizontally)
                 .clip(RoundedCornerShape(dimensionResource(R.dimen.detail_image_rounded)))
         )
         Text(
@@ -63,14 +65,16 @@ fun MyCityPlaceDetail(
                 .fillMaxWidth()
                 .padding(dimensionResource(R.dimen.detail_text_padding))
         )
-        Text(
-            text = stringResource(place.informationRes)   ,
-            textAlign = TextAlign.Justify,
-            style = MaterialTheme.typography.displayLarge,
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(dimensionResource(R.dimen.detail_text_padding))
-        )
+        Column (modifier = Modifier.verticalScroll(rememberScrollState())) {
+            Text(
+                text = stringResource(place.informationRes),
+                textAlign = TextAlign.Justify,
+                style = MaterialTheme.typography.bodyLarge,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(dimensionResource(R.dimen.detail_text_padding))
+            )
+        }
     }
 }
 
@@ -125,9 +129,11 @@ fun MyCityPlaceDetail_ExpandedScreen(
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MyCityDetailTopBar(
+    onShare: () -> Unit,
     onPrintClick: () -> Unit,
     onBack: () -> Unit,
-    modifier: Modifier
+    modifier: Modifier,
+    testPrinter: Boolean
 ){
     val context = LocalContext.current
     TopAppBar(
@@ -145,16 +151,27 @@ fun MyCityDetailTopBar(
                     )
                 }
                 Text(
-                    text = "THÔNG TIN ĐỊA ĐIỂM"
+                    text = "THÔNG TIN ĐỊA ĐIỂM",
+                    style = MaterialTheme.typography.displayMedium,
                 )
                 Spacer(modifier = Modifier.weight(1f))
                 IconButton(
-                    onClick = onPrintClick,
-                ){
+                  onClick = onShare
+                ) {
                     Icon(
-                        imageVector = Icons.Default.MailOutline,
+                        imageVector = Icons.Default.LocationOn,
                         contentDescription = null
                     )
+                }
+                if (testPrinter){
+                    IconButton(
+                        onClick = onPrintClick,
+                    ){
+                        Icon(
+                            imageVector = Icons.Default.MailOutline,
+                            contentDescription = null
+                        )
+                    }
                 }
             }
         }

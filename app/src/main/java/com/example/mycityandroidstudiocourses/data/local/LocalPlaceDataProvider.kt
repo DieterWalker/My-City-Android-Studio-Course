@@ -12,6 +12,7 @@ object LocalPlaceDataProvider {
             nameRes = R.string.coffee_1_name,
             addressRes = R.string.coffee_1_address,
             informationRes = R.string.coffee_1_information,
+            linkRes = R.string.coffee_1_link,
             category = Category.Cafe,
         ),
         /* KATINAT */
@@ -20,6 +21,7 @@ object LocalPlaceDataProvider {
             nameRes = R.string.coffee_2_name,
             addressRes = R.string.coffee_2_address,
             informationRes = R.string.coffee_2_information,
+            linkRes = R.string.coffee_2_link,
             category = Category.Cafe,
         ),
         /* THE HOUSE COFFEE */
@@ -28,6 +30,7 @@ object LocalPlaceDataProvider {
             nameRes = R.string.coffee_3_name,
             addressRes = R.string.coffee_3_address,
             informationRes = R.string.coffee_3_information,
+            linkRes = R.string.coffee_3_link,
             category = Category.Cafe,
         ),
         /* KAI COFFEE */
@@ -36,6 +39,7 @@ object LocalPlaceDataProvider {
             nameRes = R.string.coffee_4_name,
             addressRes = R.string.coffee_2_address,
             informationRes = R.string.coffee_2_information,
+            linkRes = R.string.coffee_4_link,
             category = Category.Cafe,
         ),
 
@@ -45,6 +49,7 @@ object LocalPlaceDataProvider {
             nameRes = R.string.restaurant_1_name,
             addressRes = R.string.restaurant_1_address,
             informationRes = R.string.restaurant_1_information,
+            linkRes = R.string.restaurant_1_link,
             category = Category.Restaurant,
         ),
         /* BENTHANH PRINCESS */
@@ -53,6 +58,7 @@ object LocalPlaceDataProvider {
             nameRes = R.string.restaurant_2_name,
             addressRes = R.string.restaurant_2_address,
             informationRes = R.string.restaurant_2_information,
+            linkRes = R.string.restaurant_2_link,
             category = Category.Restaurant,
         ),
         /* PHO 79 RESTAURANT */
@@ -61,6 +67,7 @@ object LocalPlaceDataProvider {
             nameRes = R.string.restaurant_3_name,
             addressRes = R.string.restaurant_3_address,
             informationRes = R.string.restaurant_3_information,
+            linkRes = R.string.restaurant_3_link,
             category = Category.Restaurant,
         ),
 
@@ -70,6 +77,7 @@ object LocalPlaceDataProvider {
             nameRes = R.string.park_1_name,
             addressRes = R.string.park_1_address,
             informationRes = R.string.park_1_information,
+            linkRes = R.string.park_1_link,
             category = Category.Park,
         ),
         /* DAM SEN WATER PARK */
@@ -78,6 +86,7 @@ object LocalPlaceDataProvider {
             nameRes = R.string.park_2_name,
             addressRes = R.string.park_2_address,
             informationRes = R.string.park_2_information,
+            linkRes = R.string.park_2_link,
             category = Category.Park,
         ),
         /* SUOI TIEN CULTURAL THEME PARK */
@@ -86,6 +95,7 @@ object LocalPlaceDataProvider {
             nameRes = R.string.park_3_name,
             addressRes = R.string.park_3_address,
             informationRes = R.string.park_3_information,
+            linkRes = R.string.park_3_link,
             category = Category.Park,
         ),
         /* SAIGON ZOO AND BOTANICAL GARDENS */
@@ -94,6 +104,7 @@ object LocalPlaceDataProvider {
             nameRes = R.string.park_4_name,
             addressRes = R.string.park_4_address,
             informationRes = R.string.park_4_information,
+            linkRes = R.string.park_4_link,
             category = Category.Park,
         ),
 
@@ -103,6 +114,7 @@ object LocalPlaceDataProvider {
             nameRes = R.string.mall_1_name,
             addressRes = R.string.mall_1_address,
             informationRes = R.string.mall_1_information,
+            linkRes = R.string.mall_1_link,
             category = Category.Mall,
         ),
         /* BITEXCO TOWER */
@@ -111,6 +123,7 @@ object LocalPlaceDataProvider {
             nameRes = R.string.mall_2_name,
             addressRes = R.string.mall_2_address,
             informationRes = R.string.mall_2_information,
+            linkRes = R.string.mall_2_link,
             category = Category.Mall,
         ),
         /* GIGAMALL */
@@ -119,6 +132,7 @@ object LocalPlaceDataProvider {
             nameRes = R.string.mall_3_name,
             addressRes = R.string.mall_3_address,
             informationRes = R.string.mall_3_information,
+            linkRes = R.string.mall_3_link,
             category = Category.Mall,
         ),
         /* THISO MALL */
@@ -127,6 +141,7 @@ object LocalPlaceDataProvider {
             nameRes = R.string.mall_4_name,
             addressRes = R.string.mall_4_address,
             informationRes = R.string.mall_4_information,
+            linkRes = R.string.mall_4_link,
             category = Category.Mall,
         ),
     )

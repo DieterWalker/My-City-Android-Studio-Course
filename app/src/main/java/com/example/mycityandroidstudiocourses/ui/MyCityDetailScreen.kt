@@ -11,14 +11,17 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import com.example.mycityandroidstudiocourses.data.Places
 import com.example.mycityandroidstudiocourses.ui.utils.MyCityDetailScreenType
 
 @Composable
 fun MyCityDetailScreen(
-    onPrintClick: () -> Unit,
+    onShare: (Places) -> Unit,
+    onPrintClick: (Places) -> Unit,
     screenType: MyCityDetailScreenType,
     viewModel: MyCityViewModel,
-    onBack: () -> Unit
+    onBack: () -> Unit,
+    testPrinter: Boolean
 ){
     val uiState by viewModel.uiState.collectAsState()
     val place = uiState.currentPlace ?: return
@@ -26,9 +29,11 @@ fun MyCityDetailScreen(
     Scaffold(
         topBar = {
             MyCityDetailTopBar(
-                onPrintClick = onPrintClick,
+                onShare = {onShare(place)},
+                onPrintClick = { onPrintClick(place) },
                 onBack = onBack,
-                modifier = Modifier
+                modifier = Modifier,
+                testPrinter = testPrinter,
             )
         }
     ) { it ->
