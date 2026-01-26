@@ -147,7 +147,7 @@ fun MyCityDetailTopBar(
                 ) {
                     Icon(
                         imageVector = Icons.Default.ArrowBack,
-                        contentDescription = null
+                        contentDescription = "Back"
                     )
                 }
                 Text(
@@ -160,7 +160,7 @@ fun MyCityDetailTopBar(
                 ) {
                     Icon(
                         imageVector = Icons.Default.LocationOn,
-                        contentDescription = null
+                        contentDescription = "Share"
                     )
                 }
                 if (testPrinter){
@@ -169,7 +169,7 @@ fun MyCityDetailTopBar(
                     ){
                         Icon(
                             imageVector = Icons.Default.MailOutline,
-                            contentDescription = null
+                            contentDescription = "Print"
                         )
                     }
                 }

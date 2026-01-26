@@ -102,7 +102,7 @@ fun MyCityCategoryTopBar(
                 ) {
                     Icon(
                         imageVector = Icons.Default.ArrowBack,
-                        contentDescription = null
+                        contentDescription = "Back"
                     )
                 }
                 Text(

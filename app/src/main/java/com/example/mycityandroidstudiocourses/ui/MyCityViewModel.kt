@@ -32,4 +32,21 @@ class MyCityViewModel : ViewModel() {
             )
         }
     }
+
+    fun onPlaceBack() {
+        _uiState.update {
+            it.copy(
+                currentPlace = null
+            )
+        }
+    }
+
+    fun onCategoryBack() {
+        _uiState.update {
+            it.copy(
+                currentCategory = null,
+                placesByCategory = emptyList()
+            )
+        }
+    }
 }
