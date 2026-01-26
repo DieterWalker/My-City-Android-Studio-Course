@@ -82,6 +82,7 @@ fun MyCityApp(
                 viewModel = viewModel,
                 onBack = {
                     navController.popBackStack()
+                    viewModel.onCategoryBack()
                 },
                 onPlaceClick = { place ->
                     viewModel.onPlaceSelect(place)
@@ -131,6 +132,7 @@ fun MyCityApp(
                 viewModel = viewModel,
                 onBack = {
                     navController.popBackStack()
+                    viewModel.onPlaceBack()
                 },
                 testPrinter = testPrinter
             )
